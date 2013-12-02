@@ -1,4 +1,21 @@
 function sOut = rsaddnoise(sIn, fs, sNR, noise, noiseFs)
+%   RSADDNOISE adds noise to obtain signal with specified SNR value
+%   RSADDNOISE(sIn, fs, sNR)
+%   RSADDNOISE(sIn, fs, sNR, noise, noiseFs)
+%
+%   Inputs:
+%       sIn 	- Input signal vetor
+%       fs 	- Sampling frequency of input signal
+%	sNR 	- required SNR value
+%
+%   Optional inputs:
+%	noise	- Noise vector
+%		  This vector should be at least as long as input
+%		  signal.
+%		  When no noise vector provided, white gaussian
+%		  noise is generated
+%	noiseFs	- Noise sampling frequency
+
 margin                  = 1; % in seconds
 normalizationMethod     = 'RMS'; % 'max'/'RMS'
 
